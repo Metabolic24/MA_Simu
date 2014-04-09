@@ -11,7 +11,7 @@ import domaineConduite.Voiture;
 public class SimulateurVoiture {
 
 	public static final int dureeUneSecondeEnMilliSecondes = 1000;
-
+	
 	public static void main(String[] args) {
 		
 		DessinVoiture dessinVoiture = new DessinVoiture();

@@ -36,4 +36,13 @@ public class Voiture extends Observable {
 		this.setChanged();
 		this.notifyObservers();
 	}
+
+	public void demarrer() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void setVitesse(int nouvelleVitesseMetreParSecondes) {
+		vitesseMetreParSecondes=nouvelleVitesseMetreParSecondes;
+	}
 }

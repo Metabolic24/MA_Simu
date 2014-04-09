@@ -34,5 +34,11 @@ public class TestVoiture {
 		assertEquals(120, voiture.getCoordXEnMetres());
 	}
 
+	@Test
+	public void testDemarrer(){
+		Voiture voiture = new Voiture(20,100);
+		voiture.demarrer();
+		assertEquals(voiture.getVitesseMetreParSecondes(),100);
+	}
 	
 }

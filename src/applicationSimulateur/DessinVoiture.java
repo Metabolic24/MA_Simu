@@ -8,6 +8,9 @@ public class DessinVoiture extends JFrame {
 
 	public static final int TailleFenetreEnPixels = 500;
 	
+	private int largeurVoiture=40;
+	private int hauteurVoiture=20;
+	
 	private int xPixelVoiture;
 
 	public DessinVoiture() {
@@ -26,12 +29,15 @@ public class DessinVoiture extends JFrame {
 	}
 
 	public void dessinerVoiture(int xPixelVoiture, Graphics graphics) {
-		graphics.fillRect(xPixelVoiture, 200, 40, 20);
-
+		graphics.fillRect(xPixelVoiture, 200, largeurVoiture, hauteurVoiture);
 	}
 
 	public void setXPixelVoiture(int xPixelVoiture) {
 		this.xPixelVoiture = xPixelVoiture;
+	}
+
+	public boolean estAuBoutDeLaRoute(int width) {
+		return width>=this.getWidth()-largeurVoiture;
 	}
 
 }
