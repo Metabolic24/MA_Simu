@@ -1,0 +1,48 @@
+Effort: 4
+Valeur : 3
+
+En tant qu'utilisateur, 
+Je veux changer l'orientation de la voiture, 
+Pour pouvoir rouler dans plusieurs sens.
+
+Effort: 12
+Valeur : 4
+
+En tant qu'utilisateur, 
+Je veux changer l'orientation de la voiture en deux dimensions, 
+Pour pouvoir rouler dans n'importe quel sens.
+
+Effort: 3
+Valeur : 3
+
+En tant qu'utilisateur, 
+Je veux que la voiture s'arrête aux limites de la route, 
+Afin qu'elle soit toujours visible.
+
+Effort: 1
+Valeur : 1
+
+En tant qu'utilisateur, 
+Je veux pouvoir stopper l'avancement de la voiture
+Afin de mieux contrôler la position de la voiture
+
+Effort: 1
+Valeur : 2
+
+En tant qu'utilisateur, 
+Je veux pouvoir démarrer la voiture à l'arrêt,
+Afin de mieux contrôler la position de la voiture.
+
+Effort: 3
+Valeur : 2
+
+En tant qu'utilisateur, 
+Je veux pouvoir modifier la vitesse de la voiture
+Afin d'augmenter la maniabilité de la voiture.
+
+
+Sprint 1 : 
+	1 US sur 2 de réalisée
+	Améliorer TDD
+	Prioriser  les US
+	
