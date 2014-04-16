@@ -14,7 +14,7 @@ public class SimulateurVoiture {
 	
 	public static void main(String[] args) {
 		
-		final Voiture voiture = new Voiture(0);
+		final Voiture voiture = new Voiture(VueVoiture.transformerPixelMetre(DessinVoiture.TailleBordureFenetre));
 		DessinVoiture dessinVoiture = new DessinVoiture();
 		
 		final VueVoiture triangle = new VueVoiture(voiture, dessinVoiture);

@@ -7,6 +7,7 @@ import javax.swing.JFrame;
 public class DessinVoiture extends JFrame {
 
 	public static final int TailleFenetreEnPixels = 500;
+	public static final int TailleBordureFenetre = 9;
 	
 	private int largeurVoiture=40;
 	private int hauteurVoiture=20;
@@ -18,7 +19,7 @@ public class DessinVoiture extends JFrame {
 		this.setTitle("Simulateur de Voiture");
 		this.setSize(TailleFenetreEnPixels, TailleFenetreEnPixels);
 		this.setVisible(true);
-		this.xPixelVoiture = 0;
+		this.xPixelVoiture = TailleBordureFenetre;
 	}
 
 	
@@ -38,7 +39,7 @@ public class DessinVoiture extends JFrame {
 
 	public boolean estAuBoutDeLaRoute(int xPixelVoiture) {
 		if(xPixelVoiture>=this.getWidth()-largeurVoiture){
-			setXPixelVoiture(this.getWidth()-largeurVoiture);
+			setXPixelVoiture(this.getWidth()-largeurVoiture-TailleBordureFenetre);
 			return true;
 		}
 		else{

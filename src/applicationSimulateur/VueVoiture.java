@@ -46,6 +46,15 @@ public class VueVoiture implements Observer {
 
 		return coordonneeXEnPixels;
 	}
+	
+	public static int transformerPixelMetre(int coordonneeXEnPixels) {
+
+		int ratioDomaineFenetre = Voiture.largeurDomaine / DessinVoiture.TailleFenetreEnPixels;
+
+		int coordonneeXEnMetres = coordonneeXEnPixels * ratioDomaineFenetre;
+
+		return coordonneeXEnMetres;
+	}
 
 	@Override
 	public void update(Observable arg0, Object arg1) {
