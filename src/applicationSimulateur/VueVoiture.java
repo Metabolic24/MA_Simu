@@ -27,19 +27,17 @@ public class VueVoiture implements Observer {
 				else if(e.getKeyCode() == KeyEvent.VK_LEFT) {
 					voiture.setVitesse(voiture.getVitesseMetreParSecondes()-1);
 				}
-				else if(e.getKeyCode()== KeyEvent.VK_ENTER)
-				{
+				else if(e.getKeyCode()== KeyEvent.VK_ENTER) {
 					voiture.demarrer();
 				}
-				else if(e.getKeyCode()== KeyEvent.VK_SPACE)
-				{
+				else if(e.getKeyCode()== KeyEvent.VK_SPACE) {
 					voiture.arreter();
 				}
 			}
 		});
 	}
 
-	public int transformerMetrePixel(int coordonneeXEnMetre) {
+	public static int transformerMetrePixel(int coordonneeXEnMetre) {
 
 		int ratioDomaineFenetre = Voiture.largeurDomaine / DessinVoiture.TailleFenetreEnPixels;
 
@@ -53,10 +51,10 @@ public class VueVoiture implements Observer {
 
 		int xVoiture = this.voiture.getCoordXEnMetres();
 		int xPixelVoiture = this.transformerMetrePixel(xVoiture);
-		if(ihm.estAuBoutDeLaRoute(xPixelVoiture)){
+		if(ihm.estAuBoutDeLaRoute(xPixelVoiture)) {
 			voiture.setVitesse(0);
 		}
-		else{
+		else {
 			ihm.setXPixelVoiture(xPixelVoiture);
 		}		
 		ihm.repaint();

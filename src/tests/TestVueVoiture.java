@@ -17,12 +17,9 @@ public class TestVueVoiture {
 	
 	@Test
 	public void testTransformationMetrePixels(){
-		
-		VueVoiture triangle = new VueVoiture(null,null);
-		
-		assertEquals(400, triangle.transformerMetrePixel(800));	
-		assertEquals(100, triangle.transformerMetrePixel(201));	
-		assertEquals(50, triangle.transformerMetrePixel(100));
+		assertEquals(400, VueVoiture.transformerMetrePixel(800));	
+		assertEquals(100, VueVoiture.transformerMetrePixel(201));	
+		assertEquals(50, VueVoiture.transformerMetrePixel(100));
 	}
 	
 
