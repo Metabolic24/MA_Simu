@@ -8,8 +8,6 @@ import domaineConduite.Voiture;
 
 public class VueVoiture implements Observer {
 
-	
-	
 	private Voiture voiture;
 
 	private DessinVoiture ihm;
@@ -48,9 +46,8 @@ public class VueVoiture implements Observer {
 		}
 		else{
 			ihm.setXPixelVoiture(xPixelVoiture);
-			ihm.repaint();
-		}
-
+		}		
+		ihm.repaint();
 	}
 
 }

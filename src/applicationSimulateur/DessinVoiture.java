@@ -24,11 +24,10 @@ public class DessinVoiture extends JFrame {
 	@Override
 	public void paint(Graphics graphics) {
 		super.paint(graphics);
-		dessinerVoiture(this.xPixelVoiture, graphics);
-
+		dessinerVoiture(graphics);
 	}
 
-	public void dessinerVoiture(int xPixelVoiture, Graphics graphics) {
+	public void dessinerVoiture(Graphics graphics) {
 		graphics.fillRect(xPixelVoiture, 200, largeurVoiture, hauteurVoiture);
 	}
 
@@ -36,8 +35,14 @@ public class DessinVoiture extends JFrame {
 		this.xPixelVoiture = xPixelVoiture;
 	}
 
-	public boolean estAuBoutDeLaRoute(int width) {
-		return width>=this.getWidth()-largeurVoiture;
+	public boolean estAuBoutDeLaRoute(int xPixelVoiture) {
+		if(xPixelVoiture>=this.getWidth()-largeurVoiture){
+			setXPixelVoiture(this.getWidth()-largeurVoiture);
+			return true;
+		}
+		else{
+			return false;
+		}
 	}
 
 }
