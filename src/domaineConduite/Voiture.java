@@ -35,8 +35,7 @@ public class Voiture extends Observable {
 	}
 
 	public void demarrer() {
-		// TODO Auto-generated method stub
-		
+		vitesseMetreParSecondes=50;
 	}
 	public void arreter() {
 		vitesseMetreParSecondes=0;
