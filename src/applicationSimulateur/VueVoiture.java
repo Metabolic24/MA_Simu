@@ -1,5 +1,7 @@
 package applicationSimulateur;
 
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
 import java.util.Observable;
 import java.util.Observer;
 
@@ -21,10 +23,19 @@ public class VueVoiture implements Observer {
 		this.voiture.addObserver(this);
 	}
 
-	public VueVoiture(Voiture voiture, DessinVoiture ihm) {
+	public VueVoiture(final Voiture voiture, DessinVoiture ihm) {
 		this.voiture = voiture;
 		this.voiture.addObserver(this);
 		this.ihm = ihm;
+		this.ihm.addKeyListener(new KeyAdapter() {
+			@Override
+			public void keyPressed(KeyEvent touchePressee) {
+				if(touchePressee.getKeyCode()== KeyEvent.VK_ENTER)
+				{
+					voiture.setVitesse(50);
+				}
+			}
+		});
 	}
 
 	public int transformerMetrePixel(int coordonneeXEnMetre) {
