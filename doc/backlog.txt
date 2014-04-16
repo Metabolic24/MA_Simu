@@ -46,3 +46,17 @@ Sprint 1 :
 	Améliorer TDD
 	Prioriser  les US
 	
+Définition de Prêt : 
+
+Tests d'acceptation
+Valeur
+Effort
+INVEST
+	
+Définition de Fini : 
+
+Tests d'acceptation
+Tests JUnit
+Clean Code
+Git
+Tâches terminées
