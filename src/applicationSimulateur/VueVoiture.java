@@ -19,6 +19,7 @@ public class VueVoiture implements Observer {
 		this.voiture.addObserver(this);
 		this.ihm = ihm;
 		ihm.addKeyListener(new KeyAdapter() {
+			
 			@Override
 			public void keyPressed(KeyEvent e) {
 				if(e.getKeyCode() == KeyEvent.VK_RIGHT) {
@@ -50,7 +51,7 @@ public class VueVoiture implements Observer {
 	public void update(Observable arg0, Object arg1) {
 
 		int xVoiture = this.voiture.getCoordXEnMetres();
-		int xPixelVoiture = this.transformerMetrePixel(xVoiture);
+		int xPixelVoiture = VueVoiture.transformerMetrePixel(xVoiture);
 		if(ihm.estAuBoutDeLaRoute(xPixelVoiture)) {
 			voiture.setVitesse(0);
 		}

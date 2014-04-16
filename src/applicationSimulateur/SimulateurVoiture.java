@@ -14,7 +14,7 @@ public class SimulateurVoiture {
 	
 	public static void main(String[] args) {
 		
-		final Voiture voiture = new Voiture(100);
+		final Voiture voiture = new Voiture(0);
 		DessinVoiture dessinVoiture = new DessinVoiture();
 		
 		final VueVoiture triangle = new VueVoiture(voiture, dessinVoiture);
@@ -24,7 +24,6 @@ public class SimulateurVoiture {
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
 				voiture.avancerEnFonctionDeLaVitesse();
-				
 			}
 		});
 		
