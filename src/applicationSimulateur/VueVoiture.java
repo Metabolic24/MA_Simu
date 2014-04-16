@@ -27,6 +27,14 @@ public class VueVoiture implements Observer {
 				else if(e.getKeyCode() == KeyEvent.VK_LEFT) {
 					voiture.setVitesse(voiture.getVitesseMetreParSecondes()-1);
 				}
+				else if(e.getKeyCode()== KeyEvent.VK_ENTER)
+				{
+					voiture.demarrer();
+				}
+				else if(e.getKeyCode()== KeyEvent.VK_SPACE)
+				{
+					voiture.arreter();
+				}
 			}
 		});
 	}

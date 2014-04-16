@@ -14,7 +14,7 @@ public class SimulateurVoiture {
 	
 	public static void main(String[] args) {
 		
-		final Voiture voiture = new Voiture(100,50);
+		final Voiture voiture = new Voiture(100);
 		DessinVoiture dessinVoiture = new DessinVoiture();
 		
 		final VueVoiture triangle = new VueVoiture(voiture, dessinVoiture);
