@@ -21,6 +21,7 @@ public class DessinVoiture extends JFrame {
 		this.xPixelVoiture = 0;
 	}
 
+	
 	@Override
 	public void paint(Graphics graphics) {
 		super.paint(graphics);

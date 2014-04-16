@@ -6,7 +6,7 @@ import org.junit.Test;
 
 import applicationSimulateur.DessinVoiture;
 
-public class DessinVoitureTest {
+public class TestDessinVoiture {
 
 	@Test
 	public void testEstAuBoutDeLaRoute() {

@@ -14,25 +14,18 @@ public class VueVoiture implements Observer {
 
 	private DessinVoiture ihm;
 
-	public VueVoiture() {
-		this.voiture = null;
-	}
-
-	public VueVoiture(Voiture voiture) {
-		this.voiture = voiture;
-		this.voiture.addObserver(this);
-	}
-
 	public VueVoiture(final Voiture voiture, DessinVoiture ihm) {
 		this.voiture = voiture;
 		this.voiture.addObserver(this);
 		this.ihm = ihm;
-		this.ihm.addKeyListener(new KeyAdapter() {
+		ihm.addKeyListener(new KeyAdapter() {
 			@Override
-			public void keyPressed(KeyEvent touchePressee) {
-				if(touchePressee.getKeyCode()== KeyEvent.VK_ENTER)
-				{
-					voiture.setVitesse(50);
+			public void keyPressed(KeyEvent e) {
+				if(e.getKeyCode() == KeyEvent.VK_RIGHT) {
+					voiture.setVitesse(voiture.getVitesseMetreParSecondes()+1);
+				}
+				else if(e.getKeyCode() == KeyEvent.VK_LEFT) {
+					voiture.setVitesse(voiture.getVitesseMetreParSecondes()-1);
 				}
 			}
 		});
