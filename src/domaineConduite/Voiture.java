@@ -14,11 +14,6 @@ public class Voiture extends Observable {
 		this.vitesseMetreParSecondes = 0;
 	}
 
-	public Voiture(int coordXEnMetres, int vitesseMetreParSecondes) {
-		this.coordXEnMetres = coordXEnMetres;
-		this.vitesseMetreParSecondes = vitesseMetreParSecondes;
-	}
-
 	public int getCoordXEnMetres() {
 		return coordXEnMetres;
 	}
@@ -41,6 +36,10 @@ public class Voiture extends Observable {
 
 	public void demarrer() {
 		vitesseMetreParSecondes=50;
+		
+	}
+	public void arreter() {
+		vitesseMetreParSecondes=0;
 		
 	}
 

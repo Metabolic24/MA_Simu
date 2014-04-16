@@ -32,7 +32,16 @@ public class VueVoiture implements Observer {
 			public void keyPressed(KeyEvent touchePressee) {
 				if(touchePressee.getKeyCode()== KeyEvent.VK_ENTER)
 				{
-					voiture.setVitesse(50);
+					voiture.demarrer();
+				}
+			}
+		});
+		this.ihm.addKeyListener(new KeyAdapter() {
+			@Override
+			public void keyPressed(KeyEvent touchePressee) {
+				if(touchePressee.getKeyCode()== KeyEvent.VK_SPACE)
+				{
+					voiture.arreter();
 				}
 			}
 		});
